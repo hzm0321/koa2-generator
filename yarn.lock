@@ -1279,6 +1279,13 @@ koa-onerror@^4.1.0:
     escape-html "^1.0.3"
     stream-wormhole "^1.1.0"
 
+koa-parameter@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.npm.taobao.org/koa-parameter/download/koa-parameter-3.0.1.tgz#b0645f2412eadb79d3a1808d17ed30824a54c887"
+  integrity sha1-sGRfJBLq23nToYCNF+0wgkpUyIc=
+  dependencies:
+    parameter "^2.2.0"
+
 koa-router@^7.4.0:
   version "7.4.0"
   resolved "https://registry.npm.taobao.org/koa-router/download/koa-router-7.4.0.tgz#aee1f7adc02d5cb31d7d67465c9eacc825e8c5e0"
@@ -1644,6 +1651,11 @@ package-json@^4.0.0:
     registry-auth-token "^3.0.1"
     registry-url "^3.0.3"
     semver "^5.1.0"
+
+parameter@^2.2.0:
+  version "2.4.0"
+  resolved "https://registry.npm.taobao.org/parameter/download/parameter-2.4.0.tgz#85ea52e9dfee80265a07b086edbc352e68b39733"
+  integrity sha1-hepS6d/ugCZaB7CG7bw1LmizlzM=
 
 parseurl@^1.3.2:
   version "1.3.3"
