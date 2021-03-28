@@ -1,8 +1,9 @@
-const Koa = require('koa')
+import Koa from 'koa';
+import onerror from 'koa-onerror';
+import middleware from './middleware';
+import routers from './routes';
+
 const app = new Koa()
-const onerror = require('koa-onerror')
-const middleware = require('./middleware');
-const routers = require('./routes');
 
 // error handler
 onerror(app)

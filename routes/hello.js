@@ -1,5 +1,7 @@
-const router = require('koa-router')()
-const { hello, world } = require('../controllers/hello');
+import Router from 'koa-router';
+import { hello, world } from '../controllers/hello';
+
+const router = Router();
 
 router.prefix('/hello');
 

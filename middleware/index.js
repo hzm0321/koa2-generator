@@ -1,10 +1,10 @@
-const json = require('koa-json');
-const views = require('koa-views');
-const logger = require('koa-logger');
-const parameter = require('koa-parameter');
-const bodyparser = require('koa-bodyparser');
+import json from 'koa-json';
+import views from 'koa-views';
+import logger from 'koa-logger';
+import parameter from 'koa-parameter';
+import bodyparser from 'koa-bodyparser';
 
-module.exports = (app) => {
+export default (app) => {
   // 请求body
   app.use(bodyparser({
     enableTypes: ['json', 'form', 'text']

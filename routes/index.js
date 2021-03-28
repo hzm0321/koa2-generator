@@ -1,9 +1,9 @@
 /**
  * 批量导入路由
  */
-const fs = require('fs')
+import fs from 'fs';
 
-module.exports = (app) => {
+export default (app) => {
   fs.readdirSync(__dirname).forEach(file => {
     if (file === 'index.js') {
       return
