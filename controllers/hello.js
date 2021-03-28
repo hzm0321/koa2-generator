@@ -3,7 +3,7 @@ class Hello {
     ctx.body = {
       success: true,
       message: 'hello world'
-    }
+    };
   }
 
   async world(ctx) {
@@ -13,8 +13,8 @@ class Hello {
     });
     ctx.body = {
       success: true,
-      message: '参数校验成功',
-    }
+      message: '参数校验成功'
+    };
   }
 }
 
