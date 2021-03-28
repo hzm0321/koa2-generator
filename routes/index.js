@@ -1,7 +1,7 @@
 /**
  * 批量导入路由
  */
-import fs from 'fs';
+import fs from 'fs'
 
 export default (app) => {
   fs.readdirSync(__dirname).forEach(file => {

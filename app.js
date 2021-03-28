@@ -6,7 +6,7 @@ import routers from './routes';
 const app = new Koa()
 
 // error handler
-onerror(app)
+onerror(app);
 
 // 中间件
 middleware(app);

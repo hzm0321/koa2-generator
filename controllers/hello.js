@@ -13,7 +13,7 @@ class Hello {
     });
     ctx.body = {
       success: true,
-      message: '参数校验成功'
+      message: '参数校验成功',
     }
   }
 }

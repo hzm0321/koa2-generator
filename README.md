@@ -69,6 +69,22 @@ require('./app');
 },
 ```
 
+## eslint 配置(默认已添加)
+
+安装所需的 eslint 包
+
+```
+yarn add eslint-config-koa eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node --dev
+```
+
+项目根目录创建 .eslintrc 文件
+
+```json
+{
+  "extends": "koa"
+}
+```
+
 ## <span id="router">路由</span>
 
 koa 的路由实现社区提供了一个成熟的解决方案——`koa-router`。
