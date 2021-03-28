@@ -87,6 +87,30 @@ yarn add eslint-config-koa eslint-config-standard eslint-plugin-standard eslint-
 
 ## <span id="router">路由</span>
 
-koa 的路由实现社区提供了一个成熟的解决方案——`koa-router`。
+koa 的路由实现社区提供了一个成熟的解决方案——[koa-router]( https://github.com/koajs/router )。  
+koa-router 可以将请求的URL和方法（如：GET 、 POST 、 PUT 、 DELETE 等） 匹配到对应的响应程序或页面。
+
+在本项目中，统一在 /routers/index.js 引入路由，并支持约定式路由生成方式，根据文件路径生成对应的路由前缀。 比如以下文件结构：
+
+```
+└── routers
+    ├── v1
+        └── hello.js
+```
+
+会得到路由  
+```{{host}}/v1/hello``` 的前缀。
+
+如果页面配置了 router.prefix('/XXX') 的写法，去手动创建路由前缀，则会覆盖约定式路由。
+
+约定 `[]` 包裹的文件或文件夹为动态路由。  
+比如：
+`routers/v1/[id]/hello.js` 解析成路由前缀会成为 `routers/:id/hello`
+`routers/v1/[id]/[hello].js` 解析成路由前缀会成为 `routers/:id/:hello`
+
+以 index.js 命名的文件，不会被解析到路由中，文件名除外。 比如：
+`routers/v1/index.js` 解析成路由会成为 `routers/v1`
+
+`注：约定式路由生成的只是路由前缀，子路由还需自行定义。`
 
 ## <span id="asset">资源</span>

@@ -1,7 +1,7 @@
 import Koa from 'koa';
 import onerror from 'koa-onerror';
 import middleware from './middleware';
-import routers from './routes';
+import routers from './routers';
 
 const app = new Koa();
 
@@ -20,7 +20,7 @@ app.use(async (ctx, next) => {
 });
 
 // 路由
-routers(app);
+routers.init(app);
 
 // error-handling
 app.on('error', (err, ctx) => {
